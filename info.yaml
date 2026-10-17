@@ -1,10 +1,10 @@
 # Tiny Tapeout project information (Wokwi project)
 project:
-  wokwi_id: "478043115461191681" # Set this to the ID of your Wokwi project (the number from the project's URL)
-  title: "Tiny Tapeout Template Copy" # Project title
+  wokwi_id: "478140301155680257" # Set this to the ID of your Wokwi project (the number from the project's URL)
+  title: "Binary Counter" # Project title
   author: "Daniels Judins" # Your name
   discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description: "8-bit XOR parity generator" # One line description of what your project does
+  description: "Shows binary XOR/parity of 8 switches on 7-segment bars" # One line description of what your project does
   language: "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz: 0 # Clock frequency in Hz (or 0 if not applicable)
 
@@ -25,14 +25,14 @@ pinout:
   ui[7]: "IN7"
 
   # Outputs
-  uo[0]: "IN7 (passthrough)"
-  uo[1]: "IN3 XOR IN7"
-  uo[2]: "IN1 XOR IN3 XOR IN5 XOR IN7"
+  uo[0]: "SEG_A = IN7"
+  uo[1]: "SEG_B = IN3 XOR IN7"
+  uo[2]: "SEG_C = IN1 XOR IN3 XOR IN5 XOR IN7"
   uo[3]: ""
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
-  uo[7]: "PARITY (XOR of IN0..IN7)"
+  uo[7]: "DP = parity of IN0..IN7"
 
   # Bidirectional pins
   uio[0]: ""
